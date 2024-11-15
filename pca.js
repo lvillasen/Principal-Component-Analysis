@@ -21,6 +21,13 @@ function ownDataset() {
 }
 
 function processData() {
+    ColCat = parseInt(document.getElementById("ColCat").value);
+if (ColCat == -1) {
+    labels = [];
+    for (let i = 0; i <= data.length; i++) {
+      labels.push("NL");
+    }
+  }
   try {
     const mathMatrix = math.matrix(data);
   } catch (error) {
